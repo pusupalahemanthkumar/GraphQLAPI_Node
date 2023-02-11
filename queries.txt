@@ -1,0 +1,9 @@
+(1)
+query {
+  events 
+}
+
+(2)
+mutation{
+  createEvent(name: "HEMANTH KUMAR")
+}
