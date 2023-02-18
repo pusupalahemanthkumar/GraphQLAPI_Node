@@ -4,7 +4,13 @@ query{
     _id,
     title,
     description,
-    price
+    price,
+    creator {
+      email,
+      createdEvents{
+        title
+      }
+    }
   }
 }
 (2)
@@ -18,5 +24,15 @@ mutation{
     title,
     date,
     description
+  }
+}
+
+(3)
+mutation{
+  createUser(userInput:{
+    emial : "test@gmail.com",
+    password : "123456"
+  }){
+    email
   }
 }
